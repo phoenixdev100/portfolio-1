@@ -1,8 +1,12 @@
-# 🚀 Modern Portfolio Website
+# <div align="center">🚀 Modern Portfolio Website</div>
+
+<div align="center">
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Express.js](https://img.shields.io/badge/Express.js-404D59?style=flat)](https://expressjs.com/)
+
+</div>
 
 ## ✨ Features
 
@@ -17,7 +21,9 @@
 
 ## 🖥️ Preview
 
-![Portfolio Preview](https://github.com/phoenixdev100/portfolio-1/blob/main/preview.png)
+<div align="center">
+  <img src="https://github.com/phoenixdev100/portfolio-1/blob/main/preview.png" alt="Portfolio Preview">
+</div>
 
 ## 🛠️ Tech Stack
 
