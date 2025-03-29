@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Me - Your Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white transition-colors duration-300">
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                        <span class="text-xl font-bold text-white">YD</span>
+                    </div>
+                    <span class="text-xl font-semibold text-white">Deepak</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="nav-link relative py-2 text-gray-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all hover:after:w-full">
+                        <i class="fas fa-home w-5 text-blue-500 mr-2"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="about.html"
+                        class="nav-link relative py-2 text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500">
+                        <i class="fas fa-user w-5 text-purple-500 mr-2"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="projects.html"
+                        class="nav-link relative py-2 text-gray-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all hover:after:w-full">
+                        <i class="fas fa-code w-5 text-green-500 mr-2"></i>
+                        <span>Projects</span>
+                    </a>
+                    <a href="skills.html"
+                        class="nav-link relative py-2 text-gray-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all hover:after:w-full">
+                        <i class="fas fa-tools w-5 text-yellow-500 mr-2"></i>
+                        <span>Skills</span>
+                    </a>
+                    <a href="contact.html"
+                        class="nav-link relative py-2 text-gray-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all hover:after:w-full">
+                        <i class="fas fa-envelope w-5 text-blue-500 mr-2"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-800/50 focus:outline-none"
+                    id="mobile-menu-button" aria-label="Menu">
+                    <div class="space-y-2">
+                        <span class="block w-6 h-0.5 bg-white transform transition-all duration-300"></span>
+                        <span class="block w-6 h-0.5 bg-white transform transition-all duration-300"></span>
+                        <span class="block w-6 h-0.5 bg-white transform transition-all duration-300"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed w-full bg-gray-900/95 border-t border-gray-800 transform transition-transform duration-300 ease-in-out shadow-lg"
+            id="mobile-menu" style="top: 64px; transform: translateY(-100%);">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html"
+                    class="flex items-center space-x-2 text-gray-300 hover:bg-gray-800/50 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
+                    <i class="fas fa-home w-5 text-blue-500"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html"
+                    class="flex items-center space-x-2 text-white bg-gray-800/50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
+                    <i class="fas fa-user w-5 text-purple-500"></i>
+                    <span>About</span>
+                </a>
+                <a href="projects.html"
+                    class="flex items-center space-x-2 text-gray-300 hover:bg-gray-800/50 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
+                    <i class="fas fa-code w-5 text-green-500"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="skills.html"
+                    class="flex items-center space-x-2 text-gray-300 hover:bg-gray-800/50 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
+                    <i class="fas fa-tools w-5 text-yellow-500"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="contact.html"
+                    class="flex items-center space-x-2 text-gray-300 hover:bg-gray-800/50 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
+                    <i class="fas fa-envelope w-5 text-blue-500"></i>
+                    <span>Contact</span>
+                </a>
+                <div class="px-3 py-2">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative pt-20">
+        <!-- Animated Background -->
+        <div class="fixed inset-0">
+            <div id="particles-js"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900/90 z-[2]"></div>
+        </div>
+
+        <!-- About Content -->
+        <div class="relative z-[3]">
+            <!-- About Hero Section -->
+            <section class="py-20 relative overflow-hidden">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <!-- Profile Image -->
+                        <div class="relative" data-aos="fade-right">
+                            <div class="w-full max-w-md mx-auto">
+                                <div class="relative rounded-2xl overflow-hidden">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-20">
+                                    </div>
+                                    <img src="assets/profile.jpg" alt="Profile" class="w-full h-auto rounded-2xl">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- About Content -->
+                        <div data-aos="fade-left">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                                About <span
+                                    class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Me</span>
+                            </h1>
+                            <p class="text-gray-400 mb-6">
+                                Hi! I'm a passionate Full Stack Developer with 5 years of experience in building web
+                                applications.
+                                I specialize in creating beautiful, functional, and user-friendly websites using modern
+                                technologies.
+                            </p>
+                            <div class="grid grid-cols-2 gap-6 mb-8">
+                                <div class="bg-gray-800/30 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
+                                    <h3 class="text-xl font-semibold mb-2">Location</h3>
+                                    <p class="text-gray-400">San Francisco, CA</p>
+                                </div>
+                                <div class="bg-gray-800/30 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
+                                    <h3 class="text-xl font-semibold mb-2">Experience</h3>
+                                    <p class="text-gray-400">5+ Years</p>
+                                </div>
+                                <div class="bg-gray-800/30 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
+                                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                                    <p class="text-gray-400">contact@yourdev.com</p>
+                                </div>
+                                <div class="bg-gray-800/30 backdrop-blur-sm p-4 rounded-xl border border-gray-700">
+                                    <h3 class="text-xl font-semibold mb-2">Availability</h3>
+                                    <p class="text-gray-400">Full-time</p>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="btn-primary inline-flex items-center">
+                                Get in Touch
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Timeline -->
+            <section class="py-20 bg-gray-800/30 backdrop-blur-sm">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-16">Professional Journey</h2>
+                    <div class="max-w-4xl mx-auto space-y-12">
+                        <!-- Timeline Item -->
+                        <div class="relative pl-8 border-l-2 border-blue-500" data-aos="fade-up">
+                            <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-500"></div>
+                            <div class="bg-gray-800/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
+                                <h3 class="text-xl font-semibold mb-2">Senior Full Stack Developer</h3>
+                                <p class="text-blue-400 mb-4">2021 - Present</p>
+                                <p class="text-gray-400">Led development of multiple high-impact web applications,
+                                    mentored junior developers, and implemented best practices for code quality and
+                                    performance.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item -->
+                        <div class="relative pl-8 border-l-2 border-purple-500" data-aos="fade-up" data-aos-delay="100">
+                            <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-purple-500"></div>
+                            <div class="bg-gray-800/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
+                                <h3 class="text-xl font-semibold mb-2">Full Stack Developer</h3>
+                                <p class="text-purple-400 mb-4">2019 - 2021</p>
+                                <p class="text-gray-400">Developed and maintained multiple web applications using modern
+                                    JavaScript frameworks and backend technologies.</p>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Item -->
+                        <div class="relative pl-8 border-l-2 border-blue-500" data-aos="fade-up" data-aos-delay="200">
+                            <div class="absolute -left-2 top-0 w-4 h-4 rounded-full bg-blue-500"></div>
+                            <div class="bg-gray-800/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
+                                <h3 class="text-xl font-semibold mb-2">Frontend Developer</h3>
+                                <p class="text-blue-400 mb-4">2018 - 2019</p>
+                                <p class="text-gray-400">Started career as a frontend developer, working with HTML, CSS,
+                                    and JavaScript to create responsive web interfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="py-20">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-16">Education</h2>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Education Card -->
+                        <div class="bg-gray-800/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700"
+                            data-aos="fade-up">
+                            <h3 class="text-xl font-semibold mb-2">Master's in Computer Science</h3>
+                            <p class="text-blue-400 mb-4">2016 - 2018</p>
+                            <p class="text-gray-400">Stanford University</p>
+                        </div>
+
+                        <!-- Education Card -->
+                        <div class="bg-gray-800/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700"
+                            data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="text-xl font-semibold mb-2">Bachelor's in Computer Science</h3>
+                            <p class="text-purple-400 mb-4">2012 - 2016</p>
+                            <p class="text-gray-400">MIT</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-20">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 gap-8">
+                <!-- Brand Section -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                            <span class="text-xl font-bold text-white">YD</span>
+                        </div>
+                        <span class="text-xl font-semibold text-white">Deepak</span>
+                    </div>
+                    <p class="text-gray-400">Building beautiful digital experiences with modern technologies and clean
+                        code.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links Section - Grid for Quick Links and Tech Stack -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Quick Links</h3>
+                        <ul class="space-y-3">
+                            <li class="group">
+                                <a href="index.html"
+                                    class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <i class="fas fa-home w-5 text-blue-500"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="about.html"
+                                    class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <i class="fas fa-user w-5 text-purple-500"></i>
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="projects.html"
+                                    class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <i class="fas fa-code w-5 text-green-500"></i>
+                                    <span>Projects</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="contact.html"
+                                    class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <i class="fas fa-envelope w-5 text-blue-500"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="-ml-1">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Tech Stack</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#"
+                                    class="group flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <span class="flex-shrink-0 w-5 text-blue-500">
+                                        <i class="fab fa-react"></i>
+                                    </span>
+                                    <span class="text-base">React.js</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="group flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <span class="flex-shrink-0 w-5 text-green-500">
+                                        <i class="fab fa-node-js"></i>
+                                    </span>
+                                    <span class="text-base">Node.js</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="group flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <span class="flex-shrink-0 w-5 text-blue-500">
+                                        <i class="fab fa-python"></i>
+                                    </span>
+                                    <span class="text-base">Python</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="group flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <span class="flex-shrink-0 w-5 text-green-500">
+                                        <i class="fas fa-database"></i>
+                                    </span>
+                                    <span class="text-base">MongoDB</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-span-2">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Newsletter</h3>
+                        <p class="text-gray-400 mb-4">Stay updated with my latest projects and tech articles.</p>
+                        <form class="space-y-2">
+                            <div class="relative">
+                                <input type="email" placeholder="Enter your email"
+                                    class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-gray-300">
+                                <button type="submit"
+                                    class="absolute right-2 top-1/2 -translate-y-1/2 text-blue-500 hover:text-blue-400">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400"> 2024 Deepak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function () {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#6366f1"
+                    },
+                    "shape": {
+                        "type": "circle"
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#6366f1",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuBars = mobileMenuButton.querySelectorAll('span');
+            let isMenuOpen = false;
+
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+
+                // Toggle menu visibility
+                mobileMenu.style.transform = isMenuOpen ? 'translateY(0)' : 'translateY(-100%)';
+
+                // Animate hamburger to X
+                if (isMenuOpen) {
+                    menuBars[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                    menuBars[1].style.opacity = '0';
+                    menuBars[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+                } else {
+                    menuBars[0].style.transform = 'none';
+                    menuBars[1].style.opacity = '1';
+                    menuBars[2].style.transform = 'none';
+                }
+            }
+
+            mobileMenuButton.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickOnButton = mobileMenuButton.contains(event.target);
+
+                if (!isClickInsideMenu && !isClickOnButton && isMenuOpen) {
+                    toggleMenu();
+                }
+            });
+
+            // Close menu when window is resized to desktop view
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 768 && isMenuOpen) { // 768px is the md breakpoint
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
