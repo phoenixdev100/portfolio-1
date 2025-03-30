@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Skills - Your Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white transition-colors duration-300">
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800/50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                    <div
+                        class="w-10 h-10 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                        <span class="text-xl font-bold text-white">YD</span>
+                    </div>
+                    <span class="text-xl font-semibold text-white">Deepak</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="nav-link relative py-2 text-gray-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all hover:after:w-full">
+                        <i class="fas fa-home w-5 text-blue-500 mr-2"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="about.html"
+                        class="nav-link relative py-2 text-gray-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all hover:after:w-full">
+                        <i class="fas fa-user w-5 text-purple-500 mr-2"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="projects.html"
+                        class="nav-link relative py-2 text-gray-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all hover:after:w-full">
+                        <i class="fas fa-code w-5 text-green-500 mr-2"></i>
+                        <span>Projects</span>
+                    </a>
+                    <a href="skills.html"
+                        class="nav-link relative py-2 text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-500">
+                        <i class="fas fa-tools w-5 text-yellow-500 mr-2"></i>
+                        <span>Skills</span>
+                    </a>
+                    <a href="contact.html"
+                        class="nav-link relative py-2 text-gray-300 hover:text-white transition-colors after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-blue-500 after:transition-all hover:after:w-full">
+                        <i class="fas fa-envelope w-5 text-blue-500 mr-2"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden flex items-center p-2 rounded-lg hover:bg-gray-800/50 focus:outline-none"
+                    id="mobile-menu-button" aria-label="Menu">
+                    <div class="space-y-2">
+                        <span class="block w-6 h-0.5 bg-white transform transition-all duration-300"></span>
+                        <span class="block w-6 h-0.5 bg-white transform transition-all duration-300"></span>
+                        <span class="block w-6 h-0.5 bg-white transform transition-all duration-300"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden fixed w-full bg-gray-900/95 border-t border-gray-800 transform transition-transform duration-300 ease-in-out shadow-lg"
+            id="mobile-menu" style="top: 64px; transform: translateY(-100%);">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html"
+                    class="flex items-center space-x-2 text-gray-300 hover:bg-gray-800/50 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
+                    <i class="fas fa-home w-5 text-blue-500"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html"
+                    class="flex items-center space-x-2 text-gray-300 hover:bg-gray-800/50 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
+                    <i class="fas fa-user w-5 text-purple-500"></i>
+                    <span>About</span>
+                </a>
+                <a href="projects.html"
+                    class="flex items-center space-x-2 text-gray-300 hover:bg-gray-800/50 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
+                    <i class="fas fa-code w-5 text-green-500"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="skills.html"
+                    class="flex items-center space-x-2 text-white bg-gray-800/50 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
+                    <i class="fas fa-tools w-5 text-yellow-500"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="contact.html"
+                    class="flex items-center space-x-2 text-gray-300 hover:bg-gray-800/50 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">
+                    <i class="fas fa-envelope w-5 text-blue-500"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative pt-20">
+        <!-- Animated Background -->
+        <div class="fixed inset-0">
+            <div id="particles-js"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/50 to-gray-900/90 z-[2]"></div>
+        </div>
+
+        <!-- Skills Content -->
+        <section class="min-h-screen relative z-[3] py-20">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center" data-aos="fade-up">
+                    My <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Skills</span>
+                </h1>
+
+                <!-- Skills Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Frontend Skills -->
+                    <div class="bg-gray-800/30 rounded-xl p-6 backdrop-blur-sm border border-gray-700"
+                        data-aos="fade-up">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-code text-2xl text-blue-400 mr-4"></i>
+                            <h2 class="text-2xl font-semibold">Frontend</h2>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">HTML/CSS</span>
+                                    <span class="text-blue-400">90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div
+                                        class="h-full w-[90%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">JavaScript</span>
+                                    <span class="text-blue-400">85%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div
+                                        class="h-full w-[85%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">React</span>
+                                    <span class="text-blue-400">80%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div
+                                        class="h-full w-[80%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Skills -->
+                    <div class="bg-gray-800/30 rounded-xl p-6 backdrop-blur-sm border border-gray-700"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-server text-2xl text-purple-400 mr-4"></i>
+                            <h2 class="text-2xl font-semibold">Backend</h2>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">Node.js</span>
+                                    <span class="text-purple-400">85%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div
+                                        class="h-full w-[85%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">Python</span>
+                                    <span class="text-purple-400">80%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div
+                                        class="h-full w-[80%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">SQL</span>
+                                    <span class="text-purple-400">75%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div
+                                        class="h-full w-[75%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Technologies -->
+                    <div class="bg-gray-800/30 rounded-xl p-6 backdrop-blur-sm border border-gray-700"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-tools text-2xl text-blue-400 mr-4"></i>
+                            <h2 class="text-2xl font-semibold">Tools</h2>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">Git</span>
+                                    <span class="text-blue-400">90%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div
+                                        class="h-full w-[90%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">Docker</span>
+                                    <span class="text-blue-400">75%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div
+                                        class="h-full w-[75%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-300">AWS</span>
+                                    <span class="text-blue-400">70%</span>
+                                </div>
+                                <div class="h-2 bg-gray-700 rounded-full">
+                                    <div
+                                        class="h-full w-[70%] bg-gradient-to-r from-blue-500 to-purple-500 rounded-full">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications Section -->
+                <h2 class="text-3xl font-bold mb-8 text-center" data-aos="fade-up">Certifications</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    <!-- AWS Certification -->
+                    <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300"
+                        data-aos="fade-up">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-gradient-to-br from-yellow-400/20 to-yellow-600/20 rounded-lg">
+                                <i class="fab fa-aws text-3xl text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">AWS Solutions Architect</h3>
+                                <p class="text-gray-400 mb-3">Amazon Web Services</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>Issued Jan 2024 - Expires Jan 2027</span>
+                                </div>
+                                <a href="#"
+                                    class="inline-flex items-center text-blue-400 hover:text-blue-300 mt-3 text-sm">
+                                    <span>View Certificate</span>
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Cloud Certification -->
+                    <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-gradient-to-br from-blue-400/20 to-blue-600/20 rounded-lg">
+                                <i class="fab fa-google text-3xl text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Professional Cloud Architect</h3>
+                                <p class="text-gray-400 mb-3">Google Cloud</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>Issued Dec 2023 - Expires Dec 2025</span>
+                                </div>
+                                <a href="#"
+                                    class="inline-flex items-center text-blue-400 hover:text-blue-300 mt-3 text-sm">
+                                    <span>View Certificate</span>
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Microsoft Certification -->
+                    <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-gradient-to-br from-blue-500/20 to-blue-700/20 rounded-lg">
+                                <i class="fab fa-microsoft text-3xl text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Azure Solutions Architect</h3>
+                                <p class="text-gray-400 mb-3">Microsoft Azure</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>Issued Nov 2023 - Expires Nov 2025</span>
+                                </div>
+                                <a href="#"
+                                    class="inline-flex items-center text-blue-400 hover:text-blue-300 mt-3 text-sm">
+                                    <span>View Certificate</span>
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Meta Certification -->
+                    <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300"
+                        data-aos="fade-up">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-gradient-to-br from-blue-400/20 to-indigo-600/20 rounded-lg">
+                                <i class="fab fa-meta text-3xl text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Meta Frontend Developer</h3>
+                                <p class="text-gray-400 mb-3">Meta</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>Issued Oct 2023 - No Expiration</span>
+                                </div>
+                                <a href="#"
+                                    class="inline-flex items-center text-blue-400 hover:text-blue-300 mt-3 text-sm">
+                                    <span>View Certificate</span>
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MongoDB Certification -->
+                    <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-gradient-to-br from-green-400/20 to-green-600/20 rounded-lg">
+                                <i class="fas fa-database text-3xl text-green-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">MongoDB Developer</h3>
+                                <p class="text-gray-400 mb-3">MongoDB University</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>Issued Sep 2023 - No Expiration</span>
+                                </div>
+                                <a href="#"
+                                    class="inline-flex items-center text-blue-400 hover:text-blue-300 mt-3 text-sm">
+                                    <span>View Certificate</span>
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kubernetes Certification -->
+                    <div class="bg-gray-800/50 rounded-xl p-6 border border-gray-700 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-gradient-to-br from-blue-400/20 to-blue-600/20 rounded-lg">
+                                <i class="fas fa-dharmachakra text-3xl text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">CKA: Certified Kubernetes Admin</h3>
+                                <p class="text-gray-400 mb-3">The Linux Foundation</p>
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <i class="far fa-calendar-alt mr-2"></i>
+                                    <span>Issued Aug 2023 - Expires Aug 2026</span>
+                                </div>
+                                <a href="#"
+                                    class="inline-flex items-center text-blue-400 hover:text-blue-300 mt-3 text-sm">
+                                    <span>View Certificate</span>
+                                    <i class="fas fa-external-link-alt ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Skills Section -->
+                <div class="mt-16">
+                    <h2 class="text-3xl font-semibold mb-8 text-center" data-aos="fade-up">Other Skills</h2>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="px-4 py-2 bg-gray-800/30 rounded-full border border-gray-700 text-gray-300">UI/UX
+                            Design</span>
+                        <span
+                            class="px-4 py-2 bg-gray-800/30 rounded-full border border-gray-700 text-gray-300">Responsive
+                            Design</span>
+                        <span class="px-4 py-2 bg-gray-800/30 rounded-full border border-gray-700 text-gray-300">RESTful
+                            APIs</span>
+                        <span
+                            class="px-4 py-2 bg-gray-800/30 rounded-full border border-gray-700 text-gray-300">GraphQL</span>
+                        <span
+                            class="px-4 py-2 bg-gray-800/30 rounded-full border border-gray-700 text-gray-300">Agile/Scrum</span>
+                        <span
+                            class="px-4 py-2 bg-gray-800/30 rounded-full border border-gray-700 text-gray-300">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-20">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 gap-8">
+                <!-- Brand Section -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                            <span class="text-xl font-bold text-white">YD</span>
+                        </div>
+                        <span class="text-xl font-semibold text-white">Deepak</span>
+                    </div>
+                    <p class="text-gray-400">Building beautiful digital experiences with modern technologies and clean
+                        code.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links Section - Grid for Quick Links and Tech Stack -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Quick Links</h3>
+                        <ul class="space-y-3">
+                            <li class="group">
+                                <a href="index.html"
+                                    class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <i class="fas fa-home w-5 text-blue-500"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="about.html"
+                                    class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <i class="fas fa-user w-5 text-purple-500"></i>
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="projects.html"
+                                    class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <i class="fas fa-code w-5 text-green-500"></i>
+                                    <span>Projects</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="contact.html"
+                                    class="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <i class="fas fa-envelope w-5 text-blue-500"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tech Stack -->
+                    <div class="-ml-1">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Tech Stack</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#"
+                                    class="group flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <span class="flex-shrink-0 w-5 text-blue-500">
+                                        <i class="fab fa-react"></i>
+                                    </span>
+                                    <span class="text-base">React.js</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="group flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <span class="flex-shrink-0 w-5 text-green-500">
+                                        <i class="fab fa-node-js"></i>
+                                    </span>
+                                    <span class="text-base">Node.js</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="group flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <span class="flex-shrink-0 w-5 text-blue-500">
+                                        <i class="fab fa-python"></i>
+                                    </span>
+                                    <span class="text-base">Python</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="group flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                                    <span class="flex-shrink-0 w-5 text-green-500">
+                                        <i class="fas fa-database"></i>
+                                    </span>
+                                    <span class="text-base">MongoDB</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="col-span-2">
+                        <h3 class="text-2xl font-semibold mb-4 text-white">Newsletter</h3>
+                        <p class="text-gray-400 mb-4">Stay updated with my latest projects and tech articles.</p>
+                        <form class="space-y-2">
+                            <div class="relative">
+                                <input type="email" placeholder="Enter your email"
+                                    class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-gray-300">
+                                <button type="submit"
+                                    class="absolute right-2 top-1/2 -translate-y-1/2 text-blue-500 hover:text-blue-400">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400"> 2024 Deepak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/nav.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            offset: 100,
+            once: true
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize particles.js
+        document.addEventListener('DOMContentLoaded', function () {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": {
+                        "value": 80,
+                        "density": {
+                            "enable": true,
+                            "value_area": 800
+                        }
+                    },
+                    "color": {
+                        "value": "#6366f1"
+                    },
+                    "shape": {
+                        "type": "circle"
+                    },
+                    "opacity": {
+                        "value": 0.5,
+                        "random": false
+                    },
+                    "size": {
+                        "value": 3,
+                        "random": true
+                    },
+                    "line_linked": {
+                        "enable": true,
+                        "distance": 150,
+                        "color": "#6366f1",
+                        "opacity": 0.2,
+                        "width": 1
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 2,
+                        "direction": "none",
+                        "random": false,
+                        "straight": false,
+                        "out_mode": "out",
+                        "bounce": false
+                    }
+                },
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "grab"
+                        },
+                        "onclick": {
+                            "enable": true,
+                            "mode": "push"
+                        },
+                        "resize": true
+                    }
+                },
+                "retina_detect": true
+            });
+        });
+
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', function () {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const isClickInsideMenu = mobileMenu.contains(event.target);
+                const isClickInsideButton = mobileMenuButton.contains(event.target);
+
+                if (!isClickInsideMenu && !isClickInsideButton && mobileMenu.classList.contains('active')) {
+                    mobileMenuButton.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+
+            // Close mobile menu when window is resized to desktop size
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+                    mobileMenuButton.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
