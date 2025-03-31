@@ -1,0 +1,241 @@
+/* Base responsive styles */
+@media (max-width: 1280px) {
+    .container {
+        max-width: 1024px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        max-width: 768px;
+    }
+    
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    h2 {
+        font-size: 2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 640px;
+        padding: 0 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.75rem !important;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .py-20 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .gap-12 {
+        gap: 1.5rem !important;
+    }
+    
+    .mb-16 {
+        margin-bottom: 2rem !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    /* Adjust spacing */
+    .py-20 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    .px-6 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* Adjust text sizes */
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    p {
+        font-size: 0.875rem !important;
+    }
+    
+    /* Stack grid items */
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    /* Adjust card padding */
+    .rounded-xl {
+        padding: 1rem !important;
+    }
+    
+    /* Adjust buttons */
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    /* Timeline adjustments */
+    .timeline-item {
+        padding-left: 1rem !important;
+    }
+    
+    /* Footer adjustments */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+/* Specific component responsive styles */
+
+/* Navigation */
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+    
+    .nav-mobile {
+        display: block;
+    }
+}
+
+/* Hero Section */
+@media (max-width: 768px) {
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+    }
+}
+
+/* Skills Section */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .skill-card {
+        padding: 1rem !important;
+    }
+}
+
+/* Projects Section */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .project-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Contact Form */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1rem !important;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Timeline */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 1.5rem !important;
+    }
+    
+    .timeline-dot {
+        left: -0.5rem !important;
+    }
+}
+
+/* Timeline Section */
+@media (max-width: 768px) {
+    .timeline-item {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .timeline-item .bg-gray-900\/50 {
+        width: calc(100% - 24px);
+    }
+
+    .timeline-dot {
+        margin-top: 1.25rem;
+    }
+
+    .absolute.left-1\/2.transform.-translate-x-1\/2 {
+        left: 12px !important;
+        transform: none !important;
+    }
+}
+
+/* Animations */
+@media (max-width: 768px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* Utility classes for responsive design */
+@media (max-width: 768px) {
+    .md\:hidden {
+        display: none !important;
+    }
+    
+    .md\:block {
+        display: block !important;
+    }
+    
+    .md\:flex {
+        display: flex !important;
+    }
+    
+    .md\:text-center {
+        text-align: center !important;
+    }
+    
+    .md\:w-full {
+        width: 100% !important;
+    }
+    
+    .md\:mx-auto {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
